@@ -7,11 +7,11 @@ function App() {
     <>
       <div>
         <a href="/">
-          <img src={XYMascot} className="logo" alt="Vite logo" />
+          <img src={XYMascot} className="logo" alt="XY Mascot" />
         </a>
       </div>
-      <h1>HOMi3 | DEVFOLiO</h1>
-      <a className="read-the-docs">
+      <h1>DEVFOLiO</h1>
+      <a className="rd">
         <code>Le Code</code> façonne le web. <br />
         Tout comme les chromosomes <b style={{ color: "var(--blanc-xy)" }}>
           X
@@ -19,15 +19,14 @@ function App() {
         et <b style={{ color: "var(--blanc-xy)" }}>Y</b> forment notre ADN.{" "}
         <br />
         Je donne vie à vos projets, en codant chaque élément avec soin et
-        précision. <br /> 
-
+        précision. <br />
         <br />
       </a>
       <div className="card">
         <button>Let's Connect</button>
       </div>
 
-      <div style={{ display: "inline-flex", gap: "25px" }}>
+      <div style={{ display: "inline-flex", gap: "15px" }}>
         <a href={"https://github.com/xyhomi3"} target="_blank">
           <GitHub sx={{ cursor: "pointer" }} />
         </a>
