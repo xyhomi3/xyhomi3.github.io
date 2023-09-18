@@ -12,6 +12,24 @@ Découvrez ce portfolio unipage, déployé automatiquement grâce à GitHub Acti
 - [Vite.js](https://vitejs.dev) : Un build tool et un serveur de développement rapide pour JavaScript et TypeScript.
 - [TypeScript](https://www.typescriptlang.org) : Un sur-ensemble de JavaScript offrant une typage statique.
 
+## Utilisation du Modèle
+
+Pour utiliser ce modèle pour créer votre propre portfolio, suivez ces étapes rapides :
+
+1. **Utiliser ce modèle**: Cliquez sur le bouton "Utiliser ce modèle" en haut de cette page pour créer un nouveau dépôt GitHub basé sur ce modèle.
+
+2. **Clonez**: Clonez le dépôt nouvellement créé sur votre machine locale :
+
+   ```bash
+   git clone https://github.com/xyhomi3/xy.git
+   ```
+
+3. **Accédez au répertoire**: Accédez au répertoire de votre projet récemment cloné :
+
+   ```bash
+   cd xy
+   ```
+
 ## Installation
 
 ### Pour commencer, assurez-vous d'avoir [Bun](https://bun.sh) installé sur votre système
@@ -31,18 +49,6 @@ bun run dev
 ```
 
 Cela démarrera un serveur de développement local pour votre portfolio.
-
-## Clonage ou Fork
-
-Si vous souhaitez explorer ou personnaliser ce projet, voici comment vous pouvez le faire :
-
-1. **Clonage**: Utilisez la commande suivante pour cloner ce dépôt sur votre machine :
-
-   ```bash
-   git clone https://github.com/xyhomi3/xy.git
-   ```
-
-2. **Fork**: Pour créer votre propre version du projet, cliquez sur le bouton "Fork" en haut de cette page. Cela créera une copie du projet dans votre compte GitHub.
 
 ## Licence
 
