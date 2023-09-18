@@ -6,7 +6,7 @@ function App() {
   return (
     <>
       <div>
-        <a href="/">
+        <a href="/xy">
           <img src={XYMascot} className="logo" alt="XY Mascot" />
         </a>
       </div>
