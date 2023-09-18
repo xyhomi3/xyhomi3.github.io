@@ -5,7 +5,7 @@
 
 ## Technologies Utilisées
 
-Découvrez mon portfolio unipage, déployé automatiquement grâce à GitHub Actions, et explorez mon travail créatif avec les technologies de pointe suivantes :
+Découvrez ce portfolio unipage, déployé automatiquement grâce à GitHub Actions, et explorez mon travail avec les technologies de pointe suivantes :
 
 - [Bun](https://bun.sh) : Un outil puissant pour la gestion de projet.
 - [React](https://reactjs.org) : Une bibliothèque JavaScript pour la création d'interfaces utilisateur.
@@ -50,4 +50,4 @@ Ce projet est sous licence MIT. Pour plus de détails, consultez le fichier [LIC
 
 ---
 
-N'hésitez pas à me contacter si vous avez des questions, des idées ou des commentaires. Merci de votre intérêt pour ce projet !
+N'hésitez pas à me contacter si vous avez des questions, des idées ou des commentaires. Merci de votre intérêt !
