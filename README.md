@@ -22,15 +22,13 @@ Découvrez ce portfolio unipage, déployé automatiquement grâce à GitHub Acti
 
 Pour utiliser ce modèle pour créer votre propre portfolio, suivez ces étapes rapides :
 
-1. **Utiliser ce modèle**: Cliquez sur le bouton "Utiliser ce modèle" en haut de cette page pour créer un nouveau dépôt GitHub basé sur ce modèle.
-
-2. **Clonez**: Clonez le dépôt nouvellement créé sur votre machine locale :
+1. **Clonez**: Clonez le dépôt nouvellement créé sur votre machine locale :
 
    ```bash
    git clone https://github.com/xyhomi3/xy.git
    ```
 
-3. **Accédez au répertoire**: Accédez au répertoire de votre projet récemment cloné :
+2. **Accédez au répertoire**: Accédez au répertoire de votre projet récemment cloné :
 
    ```bash
    cd xy
