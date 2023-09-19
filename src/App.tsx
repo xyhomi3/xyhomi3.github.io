@@ -77,7 +77,7 @@ function App() {
     <>
 
         <div>
-          <a href="/XY">
+          <a href="/">
             <img src={XYMascot} className="logo" alt="XY Mascot" />
           </a>
         </div>
