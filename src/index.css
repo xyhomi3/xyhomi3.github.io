@@ -4,7 +4,7 @@
   --orange-xy: #e49435;
 
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
+  line-height: 1.4;
   font-weight: 400;
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
@@ -54,6 +54,24 @@ button:hover {
   background-color: var(--blanc-xy);
   color: var(--noir-xy);
 }
+
+.button2 {
+  border-radius: 5px;
+  border: none;
+  padding: 1em 2em;
+  font-size: 0.7em;
+  font-weight: 500;
+  font-family: inherit;
+  color: var(--blanc-xy);
+  background-color: var(--noir-xy);
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+.button2:hover {
+  background-color: var(--orange-xy);
+  color: var(--blanc-xy);
+}
+
 button:focus,
 button:focus-visible {
   outline: none -webkit-focus-ring-color;
