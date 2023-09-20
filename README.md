@@ -1,7 +1,7 @@
 # Portfolio Unipage
 
 ![GitHub Workflow Status (with event)](https://img.shields.io/github/actions/workflow/status/xyhomi3/XY/deploy.yml)
-![Website](https://img.shields.io/website?url=https%3A%2F%2Fxyhomi3.github.io%2FXY%2F)
+![Website](https://img.shields.io/website?url=https%3A%2F%2Fxyhomi3.github.io)
 ![GitHub last commit (by committer)](https://img.shields.io/github/last-commit/xyhomi3/xy)
 ![GitHub package.json dynamic](https://img.shields.io/github/package-json/author/xyhomi3/xy)
 ![GitHub stars](https://img.shields.io/github/stars/xyhomi3/xy?style=flat-square)
