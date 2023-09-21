@@ -116,7 +116,7 @@ function App() {
                 }}
               >
                 Scannez le code QR
-                {<QrCode sx={{ color: "var(--orange-xy)" }} />}
+                {<QrCode sx={{ color: "var(--noir-xy)" }} />}
               </h4>
               <h4
                 style={{

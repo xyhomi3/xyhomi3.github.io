@@ -1,5 +1,4 @@
-![xyhomi3.github.io](https://socialify.git.ci/xyhomi3/xyhomi3.github.io/image?description=1&font=Source%20Code%20Pro&language=1&name=1&pattern=Circuit%20Board&theme=Auto)
-
+# ![xyhomi3.github.io](https://socialify.git.ci/xyhomi3/xyhomi3.github.io/image?description=1&font=Source%20Code%20Pro&language=1&name=1&pattern=Circuit%20Board&theme=Auto)
 
 ![GitHub Workflow Status (with event)](https://img.shields.io/github/actions/workflow/status/xyhomi3/XY/deploy.yml)
 ![Website](https://img.shields.io/website?url=https%3A%2F%2Fxyhomi3.github.io)
@@ -10,7 +9,7 @@
 ![GitHub](https://img.shields.io/github/license/xyhomi3/xy)
 ![X (formerly Twitter) Follow](https://img.shields.io/twitter/follow/xyhomi3)
 
-# Technologies Utilisées
+## Technologies Utilisées
 
 Découvrez ce portfolio unipage, déployé automatiquement grâce à GitHub Actions, et explorez mon travail avec les technologies de pointe suivantes :
 
