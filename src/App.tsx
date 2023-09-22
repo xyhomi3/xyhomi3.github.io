@@ -1,6 +1,8 @@
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+
 import XYMascot from "@assets/xyhomi3-mascot-wnb.svg";
 import ContactsRoundedIcon from "@mui/icons-material/ContactsRounded";
-import { GitHub, QrCode, Twitter } from "@mui/icons-material";
+import { GitHub, LinkedIn, QrCode, Twitter } from "@mui/icons-material";
 import { Modal } from "@mui/material";
 import Box from "@mui/material/Box";
 import "./App.css";
@@ -23,14 +25,14 @@ myVCard
   // Add personal data
   .addName(lastname, firstname, additional, prefix, suffix)
   // Add work data
-  .addCompany("XY Conding Hub")
+  .addCompany("XY CodeLab")
   .addJobtitle("Web Developer")
   .addRole("Frontend Developer")
-  .addEmail("xy@homi3.dev")
+  .addEmail("lucien.loua@gmail.com")
   .addPhoneNumber("+221773946665", "PREF")
   .addAddress("Dakar", "Senegal")
   .addSocial("https://x.com/xyhomi3", "Twitter", "xyhomi3")
-  .addURL("https://xyhomi3.github.io/XY/");
+  .addURL("https://xyhomi3.github.io/");
 
 //save to file
 myVCard.buildVCard();
@@ -75,100 +77,101 @@ function App() {
 
   return (
     <>
-
-        <div>
-          <a href="/">
-            <img src={XYMascot} className="logo" alt="XY Mascot" />
-          </a>
-        </div>
-        <h2>DEVFOLiO</h2>
-        <a className="rd">
-          <code>Le Code</code> façonne le web. <br />
-          Tout comme les chromosomes{" "}
-          <b style={{ color: "var(--blanc-xy)" }}>X</b> et{" "}
-          <b style={{ color: "var(--blanc-xy)" }}>Y</b> forment notre ADN.{" "}
-          <br />
-          Je donne vie à vos projets, en codant chaque élément avec soin et
-          précision. <br />
-          <br />
+      <div>
+        <a href="/">
+          <img src={XYMascot} className="logo" alt="XY Mascot" />
         </a>
-        <div className="card">
-          <button onClick={handleOpen}>Let's Connect</button>
-          <Modal open={open} onClose={handleClose}>
-            <Box sx={style}>
-              <QRCode
-                size={256}
-                style={{ height: "100%", maxWidth: "100%", width: "100%" }}
-                value={myVCard.toString()}
-                viewBox={`0 0 256 256`}
-                bgColor="transparent"
-                fgColor="var(--noir-xy)"
-              />
+      </div>
+      <h2>DEVFOLiO</h2>
+      <a className="rd">
+        <code>Le Code</code> façonne le web. <br />
+        Tout comme les chromosomes <b style={{ color: "var(--blanc-xy)" }}>
+          X
+        </b>{" "}
+        et <b style={{ color: "var(--blanc-xy)" }}>Y</b> forment notre ADN.{" "}
+        <br />
+        Je donne vie à vos projets, en codant chaque élément avec soin et
+        précision. <br />
+        <br />
+      </a>
+      <div className="card">
+        <button onClick={handleOpen}>Let's Connect</button>
+        <Modal open={open} onClose={handleClose}>
+          <Box sx={style}>
+            <QRCode
+              size={256}
+              style={{ height: "100%", maxWidth: "100%", width: "100%" }}
+              value={myVCard.toString()}
+              viewBox={`0 0 256 256`}
+              bgColor="transparent"
+              fgColor="var(--noir-xy)"
+            />
 
-              <h4
-                style={{
-                  marginBottom: 0,
-                  color: "var(--noir-xy)",
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "space-between",
-                  gap: "15px",
-                }}
-              >
-                Scannez le code QR
-                {<QrCode sx={{ color: "var(--noir-xy)" }} />}
-              </h4>
-              <h4
-                style={{
-                  marginBottom: 0,
-                  color: "var(--orange-xy)",
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  gap: "15px",
-                }}
-              >
-                Ou
-              </h4>
+            <h4
+              style={{
+                marginBottom: 0,
+                color: "var(--noir-xy)",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "space-between",
+                gap: "15px",
+              }}
+            >
+              Scannez le code QR
+              {<QrCode sx={{ color: "var(--noir-xy)" }} />}
+            </h4>
+            <h4
+              style={{
+                marginBottom: 0,
+                color: "var(--orange-xy)",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                gap: "15px",
+              }}
+            >
+              Ou
+            </h4>
 
-              <button
-                onClick={downloadVCard}
-                className="button2"
-                style={{
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  gap: "10px",
-                  textTransform: "uppercase",
-                  marginTop: "25px",
-                  padding: "15px",
-                  borderRadius: "5px",
-                }}
-              >
-                Ajouter le contact
-                {
-                  <ContactsRoundedIcon
-                    sx={{ color: "var(--blanc-xy)", display: "flex" }}
-                  />
-                }
-              </button>
-            </Box>
-          </Modal>
-        </div>
+            <button
+              onClick={downloadVCard}
+              className="button2"
+              style={{
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                gap: "10px",
+                textTransform: "uppercase",
+                marginTop: "25px",
+                padding: "15px",
+                borderRadius: "5px",
+              }}
+            >
+              Ajouter le contact
+              {
+                <ContactsRoundedIcon
+                  sx={{ color: "var(--blanc-xy)", display: "flex" }}
+                />
+              }
+            </button>
+          </Box>
+        </Modal>
+      </div>
 
-        <div style={{ display: "inline-flex", gap: "15px" }}>
-          <a href={"https://github.com/xyhomi3"} target="_blank">
-            <GitHub sx={{ cursor: "pointer" }} />
-          </a>
-          <a href={"https://x.com/xyhomi3"} target="_blank">
-            <Twitter sx={{ cursor: "pointer" }} />
-          </a>
-        </div>
-        <ParticleBackground/>
-
+      <div style={{ display: "inline-flex", gap: "15px" }}>
+        <a href={"https://github.com/xyhomi3"} target="_blank">
+          <GitHub sx={{ cursor: "pointer" }} />
+        </a>
+        <a href={"https://linkedin.com/in/lucien-loua"} target="_blank">
+          <LinkedIn sx={{ cursor: "pointer" }} />
+        </a>
+        <a href={"https://x.com/xyhomi3"} target="_blank">
+          <Twitter sx={{ cursor: "pointer" }} />
+        </a>
+      </div>
+      <ParticleBackground />
     </>
   );
 }
 
 export default App;
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
