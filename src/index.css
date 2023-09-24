@@ -100,11 +100,6 @@ button {
   place-items: center;
   align-items: center;
   padding: 3em;
-  border: solid 0.5px;
-  min-width: 200px;
-  max-width: 400px;
-  border-radius: 5px;
-
 }
 
 @media (prefers-color-scheme: light) {
@@ -142,7 +137,7 @@ button {
 @media (prefers-color-scheme: dark) {
   :root {
     color: var(--blanc-xy);
-    background-color: var(--bg-noir-xy);
+    background-color: var(--noir-xy);
   }
   a {
     color: var(--blanc-xy);

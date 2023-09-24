@@ -90,7 +90,6 @@ function App() {
             <QRCode
               className="qrcode"
               size={256}
-              style={{ height: "100%", maxWidth: "100%", width: "100%" }}
               value={myVCard.toString()}
               viewBox={`0 0 256 256`}
               bgColor="transparent"
