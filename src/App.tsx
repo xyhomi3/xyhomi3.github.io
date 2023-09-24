@@ -1,15 +1,12 @@
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 
-import XYMascot from "@assets/xyhomi3-mascot-wnb.svg";
+import XYMascot from "@assets/xycodelab-logo.svg";
 import ContactsRoundedIcon from "@mui/icons-material/ContactsRounded";
 import { GitHub, LinkedIn, QrCode, Twitter } from "@mui/icons-material";
 import { Modal } from "@mui/material";
-import Box from "@mui/material/Box";
-import "./App.css";
 import React from "react";
 import QRCode from "react-qr-code";
 import VCard from "vcard-creator";
-import ParticleBackground from "./components/ParticleBackground";
 
 // Define a new vCard
 const myVCard = new VCard("vcard");
@@ -18,7 +15,7 @@ const myVCard = new VCard("vcard");
 const lastname = "Loua";
 const firstname = "Lucien";
 const additional = "";
-const prefix = "Cécé";
+const prefix = "";
 const suffix = "";
 
 myVCard
@@ -33,30 +30,10 @@ myVCard
   .addAddress("Dakar", "Senegal")
   .addSocial("https://x.com/xyhomi3", "Twitter", "xyhomi3")
   .addURL("https://xyhomi3.github.io/");
-
 //save to file
 myVCard.buildVCard();
 
 // Render the vCard
-
-const style = {
-  position: "absolute" as const,
-  display: "flex",
-  flexDirection: "column",
-  justifyContent: "center",
-  alignItems: "center",
-  top: "50%",
-  left: "50%",
-  transform: "translate(-50%, -50%)",
-  minWidth: "200px",
-  maxWidth: "400px",
-  bgcolor: "var(--blanc-xy)",
-  color: "var(--blanc-xy)",
-  border: "none",
-  borderRadius: "5px",
-  boxShadow: 24,
-  p: 5,
-};
 
 function App() {
   const [open, setOpen] = React.useState(false);
@@ -77,28 +54,41 @@ function App() {
 
   return (
     <>
-      <div>
-        <a href="/">
-          <img src={XYMascot} className="logo" alt="XY Mascot" />
-        </a>
-      </div>
-      <h2>DEVFOLiO</h2>
-      <a className="rd">
-        <code>Le Code</code> façonne le web. <br />
-        Tout comme les chromosomes <b style={{ color: "var(--blanc-xy)" }}>
-          X
-        </b>{" "}
-        et <b style={{ color: "var(--blanc-xy)" }}>Y</b> forment notre ADN.{" "}
-        <br />
-        Je donne vie à vos projets, en codant chaque élément avec soin et
-        précision. <br />
-        <br />
-      </a>
       <div className="card">
+        <div>
+          <a href="https://github.com/xy-codelab" target="_blank">
+            <img src={XYMascot} className="logo" alt="XY Mascot" />
+          </a>
+        </div>
+        <pre style={{ fontSize: "1em", paddingBottom: "25px" }}>
+          <code>
+            Le Code façonne le web, <br />
+            tout comme les chromosomes <br />
+            <b style={{ color: "var(--orange-xy)" }}>X</b> et{" "}
+            <b style={{ color: "var(--orange-xy)" }}>Y</b> forment notre ADN.
+          </code>
+        </pre>
         <button onClick={handleOpen}>Let's Connect</button>
+
+        <div
+          style={{ paddingTop: "35px", display: "inline-flex", gap: "15px" }}
+        >
+          <a href={"https://github.com/xyhomi3"} target="_blank">
+            <GitHub sx={{ cursor: "pointer" }} />
+          </a>
+          <a href={"https://linkedin.com/in/lucien-loua"} target="_blank">
+            <LinkedIn sx={{ cursor: "pointer" }} />
+          </a>
+          <a href={"https://x.com/xyhomi3"} target="_blank">
+            <Twitter sx={{ cursor: "pointer" }} />
+          </a>
+        </div>
+      </div>
+      <div>
         <Modal open={open} onClose={handleClose}>
-          <Box sx={style}>
+          <div className="cc">
             <QRCode
+              className="qrcode"
               size={256}
               style={{ height: "100%", maxWidth: "100%", width: "100%" }}
               value={myVCard.toString()}
@@ -107,69 +97,45 @@ function App() {
               fgColor="var(--noir-xy)"
             />
 
-            <h4
-              style={{
-                marginBottom: 0,
-                color: "var(--noir-xy)",
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "space-between",
-                gap: "15px",
-              }}
-            >
-              Scannez le code QR
-              {<QrCode sx={{ color: "var(--noir-xy)" }} />}
-            </h4>
-            <h4
-              style={{
-                marginBottom: 0,
-                color: "var(--orange-xy)",
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-                gap: "15px",
-              }}
-            >
-              Ou
+            <h4>
+              <pre
+                style={{
+                  display: "flex",
+                  width: "100%",
+                  justifyContent: "space-between",
+                  alignItems: "center",
+                  fontSize: "1rem",
+                }}
+              >
+                Scannez le code QR {<QrCode className="qr" />}
+              </pre>
             </h4>
 
             <button
               onClick={downloadVCard}
-              className="button2"
               style={{
                 display: "flex",
+                width: "100%",
+                fontSize: "0.73em",
                 alignItems: "center",
-                justifyContent: "center",
-                gap: "10px",
+                justifyContent: "space-around",
                 textTransform: "uppercase",
-                marginTop: "25px",
+                marginTop: "15px",
                 padding: "15px",
                 borderRadius: "5px",
               }}
             >
-              Ajouter le contact
+              Ajouter aux contacts
               {
                 <ContactsRoundedIcon
-                  sx={{ color: "var(--blanc-xy)", display: "flex" }}
+                  style={{ fontSize: "15px" }}
+                  className="icon"
                 />
               }
             </button>
-          </Box>
+          </div>
         </Modal>
       </div>
-
-      <div style={{ display: "inline-flex", gap: "15px" }}>
-        <a href={"https://github.com/xyhomi3"} target="_blank">
-          <GitHub sx={{ cursor: "pointer" }} />
-        </a>
-        <a href={"https://linkedin.com/in/lucien-loua"} target="_blank">
-          <LinkedIn sx={{ cursor: "pointer" }} />
-        </a>
-        <a href={"https://x.com/xyhomi3"} target="_blank">
-          <Twitter sx={{ cursor: "pointer" }} />
-        </a>
-      </div>
-      <ParticleBackground />
     </>
   );
 }

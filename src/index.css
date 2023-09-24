@@ -1,13 +1,16 @@
+/* index.css */
 :root {
   --noir-xy: #1c2826;
   --blanc-xy: #fffcf7;
   --orange-xy: #e49435;
+  --gris-xy: #777777;
+  --bg-blanc-xy: #fff;
+  --bg-noir-xy: #1a1a1a;
 
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.4;
+  font-family: "Montserrat",Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
   font-weight: 400;
   color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
   background-color: var(--noir-xy);
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -16,26 +19,39 @@
   -webkit-text-size-adjust: 100%;
 }
 
-a {
-  font-weight: 500;
-  color: var(--blanc-xy);
-  text-decoration: inherit;
-}
-a:hover {
-  color: var(--orange-xy);
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0;
+  text-align: center;
 }
 
 body {
   margin: 0;
   display: flex;
   place-items: center;
-  min-width: 320px;
+  min-width: 270px;
   min-height: 100vh;
+}
+
+a {
+  font-weight: 500;
+  text-decoration: inherit;
+}
+a:hover{
+  color: var(--orange-xy);
 }
 
 h2 {
   font-size: 2em;
   line-height: 1.5;
+}
+h4{
+  margin-bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
 }
 
 button {
@@ -45,34 +61,117 @@ button {
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
-  color: var(--blanc-xy);
-  background-color: var(--orange-xy);
   cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  background-color: var(--blanc-xy);
-  color: var(--noir-xy);
+  text-transform: uppercase;
+  /* transition: border-color 0.25s; */
 }
 
-.button2 {
+.logo {
+  height: 7.77em;
+  width: 10em;
+  padding: 0;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  scale: 1.1;
+}
+
+.cc{
+  display: flex;
+  position: absolute;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  min-width: 200px;
+  max-width: 400px;
   border-radius: 5px;
-  border: none;
-  padding: 1em 2em;
-  font-size: 0.7em;
-  font-weight: 500;
-  font-family: inherit;
-  color: var(--blanc-xy);
-  background-color: var(--noir-xy);
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-.button2:hover {
-  background-color: var(--orange-xy);
-  color: var(--blanc-xy);
+  box-shadow: 24;
+  padding: 15px;
+
 }
 
-button:focus,
-button:focus-visible {
-  outline: none -webkit-focus-ring-color;
+.card {
+  display: flex;
+  flex-direction: column;
+  place-items: center;
+  align-items: center;
+  padding: 3em;
+  border: solid 0.5px;
+  min-width: 200px;
+  max-width: 400px;
+  border-radius: 5px;
+
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: var(--noir-xy);
+    background-color: white;
+  }
+  
+  .logo {
+    filter: invert(90%) hue-rotate(292deg) brightness(100%) ;
+  }
+  h4{
+    color: var(--noir-xy);
+  }
+  .cc{
+    background-color: var(--blanc-xy);
+
+  }
+  a {
+    color: var(--noir-xy);
+  }
+  button {
+    color: var(--blanc-xy);
+    background-color: var(--noir-xy);
+  }
+  button:hover {
+    background-color: var(--orange-xy);
+    color: var(--blanc-xy);
+  }
+  .card{
+    background-color: var(--blanc-xy);
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    color: var(--blanc-xy);
+    background-color: var(--bg-noir-xy);
+  }
+  a {
+    color: var(--blanc-xy);
+  }
+  .cc{
+    background-color: var(--noir-xy);
+  }
+  .qrcode{
+    background-color: var(--blanc-xy);
+  }
+  .qr{
+    color: var(--orange-xy);
+  }
+  .icom{
+    color: var(--noir-xy);
+  }
+  h4{
+    color: var(--blanc-xy);
+
+  }
+  button {
+    color: var(--noir-xy);
+    background-color: var(--blanc-xy);
+  }
+  button:hover {
+    background-color: var(--orange-xy);
+    color: var(--blanc-xy);
+  }
+  .card{
+    background-color: var(--noir-xy);
+  }
 }
