@@ -105,7 +105,7 @@ button {
 @media (prefers-color-scheme: light) {
   :root {
     color: var(--noir-xy);
-    background-color: white;
+    background-color: var(--blanc-xy);
   }
   
   .logo {
@@ -128,9 +128,6 @@ button {
   button:hover {
     background-color: var(--orange-xy);
     color: var(--blanc-xy);
-  }
-  .card{
-    background-color: var(--blanc-xy);
   }
 }
 
@@ -166,7 +163,5 @@ button {
     background-color: var(--orange-xy);
     color: var(--blanc-xy);
   }
-  .card{
-    background-color: var(--noir-xy);
-  }
+
 }
