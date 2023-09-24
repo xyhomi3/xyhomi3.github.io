@@ -7,7 +7,6 @@
 ![GitHub last commit (by committer)](https://img.shields.io/github/last-commit/xyhomi3/xy)
 ![GitHub package.json dynamic](https://img.shields.io/github/package-json/author/xyhomi3/xy)
 ![GitHub](https://img.shields.io/github/license/xyhomi3/xy)
-![X (formerly Twitter) Follow](https://img.shields.io/twitter/follow/xyhomi3)
 
 ## Technologies Utilisées
 
