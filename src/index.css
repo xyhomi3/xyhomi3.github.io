@@ -7,11 +7,11 @@
   --bg-blanc-xy: #fff;
   --bg-noir-xy: #1a1a1a;
 
-  font-family: "Montserrat",Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: "Montserrat", Inter, system-ui, Avenir, Helvetica, Arial,
+    sans-serif;
   line-height: 1.5;
   font-weight: 400;
   color-scheme: light dark;
-  background-color: var(--noir-xy);
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -20,6 +20,7 @@
 }
 
 #root {
+  display: flex;
   max-width: 1280px;
   margin: 0 auto;
   padding: 0;
@@ -28,9 +29,12 @@
 
 body {
   margin: 0;
+  padding: 0;
   display: flex;
-  place-items: center;
+  justify-content: center;
+  align-items: center;
   min-width: 270px;
+  width: 100vw;
   min-height: 100vh;
 }
 
@@ -38,7 +42,7 @@ a {
   font-weight: 500;
   text-decoration: inherit;
 }
-a:hover{
+a:hover {
   color: var(--orange-xy);
 }
 
@@ -46,7 +50,7 @@ h2 {
   font-size: 2em;
   line-height: 1.5;
 }
-h4{
+h4 {
   margin-bottom: 0;
   display: flex;
   align-items: center;
@@ -61,9 +65,13 @@ button {
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
+  width: 100%;
   cursor: pointer;
   text-transform: uppercase;
   /* transition: border-color 0.25s; */
+}
+button:hover {
+  scale: 0.98;
 }
 
 .logo {
@@ -77,7 +85,7 @@ button {
   scale: 1.1;
 }
 
-.cc{
+.cc {
   display: flex;
   position: absolute;
   flex-direction: column;
@@ -91,7 +99,10 @@ button {
   border-radius: 5px;
   box-shadow: 24;
   padding: 15px;
+}
 
+.icon:hover {
+  scale: 1.2;
 }
 
 .card {
@@ -99,69 +110,11 @@ button {
   flex-direction: column;
   place-items: center;
   align-items: center;
-  padding: 3em;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: var(--noir-xy);
-    background-color: var(--blanc-xy);
-  }
-  
-  .logo {
-    filter: invert(90%) hue-rotate(292deg) brightness(100%) ;
-  }
-  h4{
-    color: var(--noir-xy);
-  }
-  .cc{
-    background-color: var(--blanc-xy);
-
-  }
-  a {
-    color: var(--noir-xy);
-  }
-  button {
-    color: var(--blanc-xy);
-    background-color: var(--noir-xy);
-  }
-  button:hover {
-    background-color: var(--orange-xy);
-    color: var(--blanc-xy);
-  }
+.boutton {
+  margin-top: 15px;
 }
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    color: var(--blanc-xy);
-    background-color: var(--noir-xy);
-  }
-  a {
-    color: var(--blanc-xy);
-  }
-  .cc{
-    background-color: var(--noir-xy);
-  }
-  .qrcode{
-    background-color: var(--blanc-xy);
-  }
-  .qr{
-    color: var(--orange-xy);
-  }
-  .icom{
-    color: var(--noir-xy);
-  }
-  h4{
-    color: var(--blanc-xy);
-
-  }
-  button {
-    color: var(--noir-xy);
-    background-color: var(--blanc-xy);
-  }
-  button:hover {
-    background-color: var(--orange-xy);
-    color: var(--blanc-xy);
-  }
-
+.qrcode{
+  border-radius: 5px;
 }
