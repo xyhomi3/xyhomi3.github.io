@@ -139,7 +139,7 @@ function App() {
 
           <div className="card">
             <div>
-              <a href="https://github.com/xy-codelab" target="_blank">
+              <a href="https://github.com/XYCodeLab" target="_blank">
                 {theme === lightTheme ? (
                   <img src={dark} className="logo" alt="XY Mascot" />
                 ) : (
