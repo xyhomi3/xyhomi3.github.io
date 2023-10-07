@@ -157,6 +157,7 @@ function App() {
               }}
             >
               <Box
+              
                 backgroundColor={"utility.elevation.surface.current"}
                 style={{
                   padding: "15px",
@@ -243,7 +244,7 @@ function App() {
               
               <div style={CardTheme} className="cc">
                 <div className="close">
-                <Close onClick={handleClose} sx={{fontSize:"3em"}} />
+                <Close onClick={handleClose} sx={{fontSize:"2em"}} />
                 </div>
                 <QRCode
                   style={QrTheme}
