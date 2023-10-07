@@ -6,7 +6,7 @@ import { ThemeProvider, CssBaseline } from "@mui/material";
 import { lightTheme, darkTheme } from "./themes/theme";
 import light from "@assets/xycodelab-logo-blanc.svg";
 import dark from "@assets/xycodelab-logo-noir.svg";
-import { GitHub, LinkedIn, QrCode, Twitter } from "@mui/icons-material";
+import { Close, GitHub, LinkedIn, QrCode, Twitter } from "@mui/icons-material";
 import { Modal } from "@mui/material";
 import React from "react";
 import QRCode from "react-qr-code";
@@ -116,7 +116,7 @@ function App() {
     const a = document.createElement("a");
     a.style.display = "none";
     a.href = url;
-    a.download = "xy-contact.vcf";
+    a.download = "contact.vcf";
     document.body.appendChild(a);
     a.click();
     window.URL.revokeObjectURL(url);
@@ -159,14 +159,14 @@ function App() {
               <Box
                 backgroundColor={"utility.elevation.surface.current"}
                 style={{
-                  padding:"15px",
+                  padding: "15px",
                   borderRadius: "5px",
                   border: "solid 0.5px var(--noir-xy)",
                   minWidth: "267px",
                   maxWidth: "375px",
                 }}
               >
-                <Code  style={{color: "var(--noir-xy)", background: "none" }}>
+                <Code style={{ color: "var(--noir-xy)", background: "none" }}>
                   <code>
                     <>
                       Hello Word! <br />
@@ -240,7 +240,11 @@ function App() {
 
           <div>
             <Modal open={open} onClose={handleClose}>
+              
               <div style={CardTheme} className="cc">
+                <div className="close">
+                <Close onClick={handleClose} sx={{fontSize:"3em"}} />
+                </div>
                 <QRCode
                   style={QrTheme}
                   className="qrcode"
@@ -258,12 +262,21 @@ function App() {
                       justifyContent: "space-between",
                       alignItems: "center",
                       fontSize: "1.2rem",
+                      marginBottom:"0.3em",
                     }}
                   >
                     Scan the QR code {<QrCode className="qr" />}
                   </pre>
                 </h4>
-                <b style={{color:"var(--orange-xy)"}}>OR</b>
+                <pre
+                  style={{
+                    color: "var(--orange-xy)",
+                    fontSize: "1.2em",
+                    margin: "0",
+                  }}
+                >
+                  {"{OR}"}
+                </pre>
                 <button
                   className="boutton"
                   onClick={downloadVCard}
@@ -271,6 +284,12 @@ function App() {
                 >
                   Add to contacts
                 </button>
+                <p style={{fontSize:"0.5em", textAlign:"center", paddingTop:"0.5em", fontWeight:"500",}}>
+                  Scanning this QR code or clicking {"{ADD TO CONTACTS}"} will download my contact
+                  info in vCard format, including my name, phone, email, etc. By
+                  doing so, you agree to store this data on your device for
+                  contact purposes. Ensure compatibility with vCard files.
+                </p>
               </div>
             </Modal>
           </div>
